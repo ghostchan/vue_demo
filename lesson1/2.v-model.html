@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="msg">
+    <input type="text" v-model="msg">
+    <br>
+    {{msg}}
+    <br>
+    {{msg2}}
+    <br>
+    {{msg3}}
+    <br>
+    {{msg4}}
+    <br>
+    {{msg5}}
+</div>
+<script type="text/javascript">
+    new Vue({
+        el:"#app",
+        data:{
+            msg:"hello vue",
+            msg2:13,
+            msg3:true,
+            msg4:["apple","orange","pear","watermalon"],
+            msg5:{a:"apple",b:"pear",c:"orange"}
+        }
+    });
+</script>
+</body>
+</html>
