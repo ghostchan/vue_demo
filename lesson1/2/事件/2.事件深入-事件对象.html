@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script type="text/javascript" src="../vue.js"></script>
+    <script type="text/javascript" src="../../vue.js"></script>
     <script type="text/javascript">
         window.onload=function(){
             new Vue({
@@ -12,12 +12,9 @@
 
                 },
                 methods:{
-                    show:function(ev){
-                        alert(1);
-                        ev.cancelBubble=true;
-                    },
-                    show2:function(){
-                        alert(2);
+                    show:function(ev,str){
+                        alert(ev.clientX);
+                        alert(str);
                     }
                 }
             });
@@ -26,10 +23,7 @@
 </head>
 <body>
     <div id="box">
-        <div @click="show2()">
-            <input type="button" value="添加" @click="show($event)">
-        </div>
-
+        <input type="button" value="添加" @click="show($event,'nuo')">
     </div>
 </body>
 </html>

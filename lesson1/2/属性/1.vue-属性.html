@@ -12,9 +12,11 @@
 
                 },
                 methods:{
-                    show:function(ev,str){
-                        alert(ev.clientX);
-                        alert(str);
+                    show:function(){
+                        alert("您按回车了");
+                    },
+                    show2:function(){
+                        alert(2);
                     }
                 }
             });
@@ -23,7 +25,10 @@
 </head>
 <body>
     <div id="box">
-        <input type="button" value="添加" @click="show($event,'nuo')">
+        <input type="text" @keyup.up="show()">
+        <input type="text" @keyup.down="show()">
+        <input type="text" @keyup.left="show()">
+        <input type="text" @keyup.right="show()">
     </div>
 </body>
 </html>
