@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../vue.js"></script>
+    <script type="text/javascript">
+        window.onload=function(){
+            new Vue({
+                el:"#box",
+                data:{
+
+                },
+                methods:{
+                    show:function(){
+                        alert(1);
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <input type="button" value="添加" @click="show()">
+    </div>
+</body>
+</html>
